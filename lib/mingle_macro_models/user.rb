@@ -1,4 +1,4 @@
-#Copyright 2012 ThoughtWorks, Inc.  All rights reserved.
+# Copyright 2009 - 2013 ThoughtWorks, Inc.  All rights reserved.
 # A lightweight model of a user in Mingle.
 module Mingle
   class User

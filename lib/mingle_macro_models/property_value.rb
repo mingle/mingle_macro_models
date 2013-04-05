@@ -1,12 +1,12 @@
+# Copyright 2009 - 2013 ThoughtWorks, Inc.  All rights reserved.
+
 module Mingle
-  
-  # Copyright 2009 ThoughtWorks, Inc.  All rights reserved.
   class PropertyValue
-    
+
     def initialize(property_value)
       @property_value = property_value
     end
-  
+
     # *returns*: The display value of this value
     # Use the result of this method to display this value on the UI
     # For the various property types, the following are the values you can expect to see
@@ -19,7 +19,7 @@ module Mingle
     def display_value
       @property_value.display_value
     end
-  
+
     # *returns*: The identifier that is used to represent this value in the database
     # You will most likely not have to use this value in your macros
     # For the various property types, the following are the values you can expect to see
@@ -32,7 +32,7 @@ module Mingle
     def db_identifier
       @property_value.db_identifier
     end
-  
+
     # *returns*: A representation of this value that is unique and representable in a URL
     # Use the result of this method if in any links that you want to build to point back into Mingle
     # For the various property types, the following are the values you can expect to see
@@ -45,7 +45,7 @@ module Mingle
     def url_identifier
       @property_value.url_identifier
     end
-  
+
     # *returns*: The hex color code for this PropertyValue
     def color
       @property_value.color.gsub('#', '')
@@ -54,14 +54,14 @@ module Mingle
     # *returns*: The PropertyDefinition that this value belongs to
     def property_definition
       @property_definition_loader.load
-    end  
-  
+    end
+
     def to_s
       "PropertyValue[display_value=#{display_value},db_identifier=#{db_identifier},url_identifier=#{url_identifier}]"
     end
 
     attr_writer :property_definition_loader
-    
+
   end
-      
+
 end
